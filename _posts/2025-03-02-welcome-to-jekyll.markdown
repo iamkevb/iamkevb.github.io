@@ -6,3 +6,4 @@ categories: I dont know what is happening
 ---
 
 I don't know what's happening right now.
+DNS can be so frustrating.
