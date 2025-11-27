@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fly Fishers Pub Night</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #10231a;
+      --river: #1f6f63;
+      --foam: #e8f5f2;
+      --gold: #caa44c;
+      --wood: #3b2f2f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #1f6f63 0%, #0e1f19 60%, #050c09 100%);
+      color: #f2f7f6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .invite {
+      background: linear-gradient(180deg, rgba(16,35,26,0.95), rgba(3,9,7,0.95));
+      border-radius: 24px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.55);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero {
+      position: relative;
+      padding: 80px 48px 72px;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.75)),
+        url("/images/strathcona.jpeg") center / cover;
+    }
+
+    .badge {
+      display: inline-block;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(202,164,76,0.15);
+      border: 1px solid rgba(202,164,76,0.4);
+      color: #f3e3b0;
+      margin-bottom: 18px;
+    }
+
+    .title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: 0.03em;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 2.5vw, 20px);
+      max-width: 520px;
+      margin: 0 auto;
+      color: #d2ece6;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      padding: 56px 48px 64px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(31,111,99,0.18), rgba(31,111,99,0.05));
+      border-radius: 20px;
+      padding: 32px 28px 36px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9fd8cc;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .card p strong {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      padding: 0 48px 56px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      background: linear-gradient(180deg, #d4b25a, #b8932e);
+      color: #1a1404;
+      box-shadow: 0 16px 36px rgba(202,164,76,0.45);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(202,164,76,0.6);
+    }
+
+    .note {
+      font-size: 14px;
+      color: #b6ded5;
+      opacity: 0.9;
+      text-align: center;
+      max-width: 520px;
+    }
+
+    .footer {
+      padding: 24px 24px 32px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6faea0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 64px 24px 56px;
+      }
+
+      .details {
+        padding: 40px 24px 48px;
+      }
+
+      .cta {
+        padding: 0 24px 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="invite">
+    <section class="hero">
+      <div class="badge">Ottaw Area Fly Fishers</div>
+      <h1 class="title">Year End Pub Night</h1>
+      <p class="subtitle">
+        A casual year end meet-up to recap our seasons, lie about the fish we caught and share a pint.
+      </p>
+    </section>
+
+    <section class="details">
+      <div class="card">
+        <h3>Date</h3>
+        <p><strong>Wednesday, December 11</strong></p>
+        <p>7:00 PM</p>
+      </div>
+
+      <div class="card">
+        <h3>Location</h3>
+        <p>
+          <strong>Tooth and Nail Brewing Co.</strong><br />
+          3 Irving Ave<br>
+          Ottawa, ON<br>
+          K1Y 1Z2
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <a
+        class="btn"
+        href="https://maps.app.goo.gl/ZhSSmPkyjQq7BRtG8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Get Directions
+      </a>
+
+      <p class="note">
+        Bring your favourite fly box, a river story, or just your thirst. All anglers welcome.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
