@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Hi Geoff!"
+title:  "DNS!"
 date:   2025-03-02 18:31:21 -0500
-categories: I dont know what is happening
+categories: github dns
 ---
 
-I don't know what's happening right now.
-DNS can be so frustrating.
+Hosting on Github pages for now. 
